@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="848.0" prefWidth="1200.0" style="-fx-background-color: #3B4248;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasindu.book_store_management_system.DashboardController">
+   <children>
+      <Pane prefHeight="95.0" prefWidth="1200.0" style="-fx-background-color: #32383A;">
+         <children>
+            <Label layoutX="197.0" prefHeight="42.0" prefWidth="807.0" style="-fx-alignment: center; -fx-text-fill: #65A724;" text="Book Store Management System" textAlignment="CENTER" textFill="#65a724">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="642.0" layoutY="59.0" text="UserName" textFill="#65a724">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="743.0" layoutY="63.0" />
+            <Label layoutX="910.0" layoutY="59.0" text="Password" textFill="#65a724">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password" layoutX="998.0" layoutY="62.0" prefHeight="25.0" prefWidth="190.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="allBooksTable" layoutX="11.0" layoutY="395.0" maxHeight="-Infinity" prefHeight="440.0" prefWidth="1178.0" style="-fx-background-color: #3E464A;">
+        <columns>
+          <TableColumn fx:id="allIsbn" prefWidth="108.0" text="ISBN" />
+            <TableColumn fx:id="allName" prefWidth="345.0" text="Name" />
+            <TableColumn fx:id="allAuthor" prefWidth="281.0" text="Author" />
+            <TableColumn fx:id="allCategory" prefWidth="190.0" text="Category" />
+            <TableColumn fx:id="allCopies" prefWidth="92.0" text="Copies" />
+            <TableColumn fx:id="allPrice" prefWidth="161.0" text="Price" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem fx:id="count" mnemonicParsing="false" text="count">
+                     <graphic>
+                        <Spinner fx:id="countSpinner" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem fx:id="addToCartButton" mnemonicParsing="false" onAction="#onAddToCartButtonClick" text="Add To Cart" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label layoutX="12.0" layoutY="356.0" text="ISBN" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="355.0" text="Name" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="501.0" layoutY="355.0" text="Author" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="354.0" text="Category" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="isbn" layoutX="57.0" layoutY="358.0" prefHeight="25.0" prefWidth="137.0" />
+      <TextField fx:id="name" layoutX="266.0" layoutY="357.0" prefHeight="25.0" prefWidth="221.0" />
+      <TextField fx:id="author" layoutX="565.0" layoutY="357.0" prefHeight="25.0" prefWidth="190.0" />
+      <Button fx:id="resetButton" layoutX="1104.0" layoutY="342.0" mnemonicParsing="false" onAction="#onResetButtonClicked" prefHeight="44.0" prefWidth="80.0" text="Reset" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchButton" centerShape="false" graphicTextGap="1.0" layoutX="999.0" layoutY="343.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onSearchButtonClicked" prefHeight="44.0" prefWidth="92.0" text="Search" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="cartTable" layoutX="20.0" layoutY="144.0" prefHeight="185.0" prefWidth="999.0" style="-fx-background-color: #3E464A;">
+        <columns>
+          <TableColumn fx:id="cartIsbn" prefWidth="121.0" text="ISBN" />
+          <TableColumn fx:id="cartName" prefWidth="334.0" text="Name" />
+            <TableColumn fx:id="cartAuthor" prefWidth="292.0" text="Author" />
+            <TableColumn fx:id="cartQuantity" prefWidth="114.0" text="Quntity" />
+            <TableColumn fx:id="cartPrice" prefWidth="137.0" text="Price" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="remove" mnemonicParsing="false" onAction="#onRemoveFromCartClicked" text="Remove" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="sellButton" layoutX="1029.0" layoutY="144.0" mnemonicParsing="false" onAction="#onSellButtonClicked" prefHeight="44.0" prefWidth="149.0" text="Sell Books" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearButton" layoutX="1029.0" layoutY="200.0" mnemonicParsing="false" onAction="#onClearCartButtonClicked" prefHeight="44.0" prefWidth="149.0" text="Clear Cart" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminButton" layoutX="1030.0" layoutY="255.0" mnemonicParsing="false" onAction="#onAdminPanelButtonClick" prefHeight="44.0" prefWidth="149.0" text="Admin Panel" textFill="#65a724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="category" layoutX="850.0" layoutY="356.0" prefHeight="25.0" prefWidth="126.0" />
+   </children>
+</AnchorPane>

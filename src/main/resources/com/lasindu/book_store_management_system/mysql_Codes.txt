@@ -1,0 +1,62 @@
+CREATE DATABASE bookstore;
+
+USE bookstore;
+
+CREATE TABLE books {
+	isbn VARCHAR(10) NOT NULL,
+	name VARCHAR(150),
+	author VARCHAR(150),
+	category VARCHAR(20),
+	copies INTEGER,
+	price DOUBLE
+	PRIMARY KEY (isbn)
+);
+
+INSERT INTO books
+VALUES
+("0000000001", "Winning the Inner Battle Bringing the best version of you to cricket", "Shane Watson", "Sci-Fi", 10, 550),
+("0000000002", "Shane Watson", "Bob Dylan", "Detective", 10, 1000),
+("0000000003", "A confused Mind story", "Sahil Seth", "Sci-Fi", 10, 350),
+("0000000004", "Modi@20: Dreams Meet Delivery", "S Jaishankar", "Detective", 10, 300),
+("0000000005", "She Is–Women in STEAM", "Elsa Marie D’Silva and Supreet K Singh", "Detective", 10, 330),
+("0000000006", "The India Way: Strategies for an Uncertain World", "S Jaishankar", "Novel", 10, 350),
+("0000000007", "Muskurate Chand Lamhe aur Kuchh Khamoshiyan", "Manoj Bajpayee", "Novel", 10, 350),
+("0000000008", "Ambedkar and Modi: Reformer’s Ideas Performer’s Implementation", "Ram Nath Kovind", "Sci-Fi", 10, 350),
+("0000000009", "Lockdown Lyrics", "Naveen Patnaik", "Novel", 10, 350),
+("0000000010", "A New India: Selected Writings 2014-19", "M Venkaiah Naidu", "Sci-Fi", 10, 350),
+("0000000011", "The Hero of Tiger Hill", "Subedar Major Yadav", "Novel", 10, 350),
+("0000000012", "The McMahon line", "Himachal Governor Rajendra Vishwanath", "Sci-Fi", 10, 350),
+("0000000013", "Bhartiya Samvidhan: Ankahi Kahani", "Ram Bahadur Rai", "Detective", 10, 350),
+("0000000014", "Civil List – 2022 of IAS officers", "Jitendra Singh", "Novel", 10, 350),
+("0000000015", "Ashtang Yoga", "Dr. Sonu Phogat", "Detective", 10, 350),
+("0000000016", "The Queen of Indian Pop: The Authorised Biography of Usha Uthup", "Srishti Jha", "Sci-Fi", 10, 350),
+("0000000017", "'Ungalil Oruvan' (One Among You)", "M.K. Stalin", "Sci-Fi", 10, 350),
+("0000000018", "Indomitable: A Working Woman’s Notes on Life, Work and Leadership", "Arundhati Bhattacharya", "Novel", 10, 350),
+("0000000019", "1857: The Sword of Mastaan", "Vineet Bajpai", "Novel", 10, 350),
+("0000000020", "On Board: My Years in BCCI", "Ratnakar Shetty", "Novel", 10, 350),
+("0000000021", "Gaonburo", "Amar Mitra", "Novel", 10, 350),
+("0000000022", "To Raise A Fallen People: How Nineteenth-Century Indians Saw Their World and Shaped OurS", "Rahul Sagar", "Sci-Fi", 10, 350),
+("0000000023", "The Struggle for Police Reforms in India: Ruler’s Police to People’s Police	", "Prakash Singh", "Detective", 10, 350),
+("0000000024", "INDO-PAK WAR 1971- Reminiscences of Air Warriors", "Air Marshal Jagjeet Singh and Group Captain Shailendra Mohan", "Sci-Fi", 10, 350),
+("0000000025", "The First Responders: Women Who Led India Through The Pandemic", "Observer Research Foundation and Reliance Foundation", "Sci-Fi", 10, 350),
+("0000000026", "Chinese Spies: From Chairman Mao to Xi Jinping", "Roger Faligot", "Novel", 10, 350),
+("0000000027", "The Sikh History of East India", "Abinash Mohapatra", "Detective", 10, 350),
+("0000000028", "The Magic of Mangalajodi", "Avinash Khemka", "Detective", 10, 350),
+("0000000029", "The Boy Who Wrote a Constitution", "Rajesh Talwar", "Sci-Fi", 10, 350),
+("0000000030", "December in Dacca", "K.S. Nair", "Novel", 10, 350),
+("0000000031", "The Dalit Truth: The Battles For Realizing Ambedkar’s Vision", "K. Raju", "Sci-Fi", 10, 350),
+("0000000032", "Not Just A Nightwatchman: My Innings with BCCI", "Vinod Rai", "Detective", 10, 350),
+("0000000033", "The Maverick Effect", "Harish Mehta", "Novel", 10, 350),
+("0000000034", "Birsa Munda – Janjatiya Nayak", "Prof. Alok Chakrawal", "Sci-Fi", 10, 350),
+("0000000035", "Decoding Indian Babudom", "Ashwini Shrivastava", "Sci-Fi", 10, 350),
+("0000000036", "Queen of Fire", "Devika Rangachari", "Detective", 10, 350),
+("0000000037", "Tiger of Drass: Capt. Anuj Nayyar, 23, Kargil Hero", "Meena Nayyar and Himmat Singh Shekhawat", "Sci-Fi", 10, 350),
+("0000000038", "Crunch Time: Narendra Modi’s National Security Crises", "SreeRam Chaulia", "Novel", 10, 350),
+("0000000039", "Indian Agriculture towards 2030", "NITI Aayog and FAO", "Novel", 10, 350),
+("0000000040", "The Little Book of Joy", "Dalai Lama (Tenzin Gyatso) & Archbishop Desmond Tutu", "Detective", 10, 350),
+("0000000041", "The Book of Bihari Literature", "Published by: HarperCollins India Edited by: Abhay K", "Sci-Fi", 10, 350),
+("0000000042", "More than Just Surgery: Life Lessons Beyond the OT", "Dr Tehemton Erach Udwadia", "Detective", 10, 350),
+("0000000043", "The Crossing", "Manjeet Mann", "Sci-Fi", 10, 350),
+("0000000044", "Monsoon", "Abhay K.", "Novel", 10, 350)
+;
+
